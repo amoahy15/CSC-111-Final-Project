@@ -53,7 +53,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
 
             //Make only question buttons clickable
-            if(i >5){
+            if(i >= 0){
                 myJeopardy[i].addActionListener(this); // To make it clickable
             }//End if
 
@@ -171,14 +171,14 @@ public class jeopardy extends JFrame implements ActionListener{
     public int questions(int pos, int score){
 
         switch (pos){
-            //Sports Questions
+            //Academics Questions
             case 0: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("Question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $100 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $100 \nWhat is: ");
                 answer = answer.toLowerCase();
 
                 if (answer.equals("answer")){
@@ -197,7 +197,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $200 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $200 \nWhat is: ");
                 answer = answer.toLowerCase();
 
                 if (answer.equals("answer")){
@@ -211,35 +211,30 @@ public class jeopardy extends JFrame implements ActionListener{
                 break;
             /****************/
             case 6: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>What does Harry eat to manage to breathe "
-                        + "underwater during the second task"
-                        + "of the Triwizard Tournament?</html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Harry Potter for $300 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $300 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("gillyweed") || answer.equals("gilly weed")){
+                if (answer.equals("answer") || answer.equals("gilly weed")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Gillyweed");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             case 9:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>What does the spell \"Obliviate\" do? <br>"
-                        + "a. Destroy objects <br>"
-                        + "b. Make objects invisible <br>"
-                        + "c. Remove parts of someone's memory </html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Harry Potter for $400 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $400 \nWhat is: ");
                 answer = answer.toLowerCase();
 
                 if (answer.equals("c")){
@@ -247,124 +242,123 @@ public class jeopardy extends JFrame implements ActionListener{
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: C");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 12:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>What is the killing curse?<br>"
-                        + "(Please spell correctly)");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Harry Potter for $500 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $500 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("avada kedavra")){
+                if (answer.equals("answer")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Avada Kedavra");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
 
             /******************************************************************************************************/
-            //Academics
+            //Sports
             case 1:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>Who directed Rogue One: A Star Wars Story? </html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Star Wars for $100 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $100 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("gareth edwards")){
+                if (answer.equals("answer")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Gareth Edwards");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             /*************/
             case 4:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>Who provided the voice of Yoda? </html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Star Wars for $200 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $200 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("frank ozr")){
+                if (answer.equals("answer")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Frank Oz");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 7:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>Who commissioned the Grand Army of the Republic?</html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Star Wars for $300 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $300 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("jedi master sifo-dyas") || answer.equals("sifo dyas") || answer.equals("sifo-dyas")){
+                if (answer.equals("answer")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Sifo Dyas");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 10:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>How many known Jedi possess a purple-bladed lightsaber?</html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Star Wars for $400 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $400 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("one") || answer.equals("1")){
+                if (answer.equals("answer") || answer.equals("1")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: One");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 13:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>Qui-Gon Jinn dies during a duel on which planet?</html>");
+                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Star Wars for $500 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $500 \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("naboo")){
+                if (answer.equals("answer")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Naboo");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
                     score = moneyWrong(pos);
                 }
                 break;
@@ -372,53 +366,52 @@ public class jeopardy extends JFrame implements ActionListener{
             /******************************************************************************************************/
             //Campus Life
             case 2:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>In \"The Lion King,\" what side of Scar's face is his scar on? Left or right?</html>");
+                //myJeopardy[pos].setText("How many freshman dorms are on south campus?");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Disney for $100 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Campus Life for $100 \nHow many freshman dorms are on south campus? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("left")){
+                if (answer.equals("7") || answer.equals("seven") || answer.equals("Seven")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG! \n Correct Answer: left");
+                    JOptionPane.showMessageDialog(null, "WRONG! \n Correct Answer: 7");
                     score = moneyWrong(pos);
                 }
                 break;
             /*************/
             case 5:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>In \"Aladdin,\" what does Aladdin, and a reluctant Abu, give to the poor children to eat?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Disney for $200 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Campus Life for $200 \nWho is the current dean of students? \nWho is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("bread") || answer.equals("loaf of bread")){
+                if (answer.equals("Dr. Adam Goldstein") || answer.equals("Adam Goldstein")
+                || answer.equals("dr. adam goldstein") || answer.equals("adam goldstein")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG! \n Correct Answer: bread");
+                    JOptionPane.showMessageDialog(null, "WRONG! \n Correct Answer: Dr. Adam Goldstein");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 8:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>In \"Hercules,\" Hades promised not to harm Megara if Hercules gave up his strength for how long?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Disney for $300 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Campus Life for $300 \nHow many social fraternities and sororities are at Wake? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("24 hours") || answer.equals("24") || answer.equals("twenty four")){
+                if (answer.equals("24") || answer.equals("twenty four") || answer.equals("Twenty four")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
@@ -429,39 +422,37 @@ public class jeopardy extends JFrame implements ActionListener{
                 break;
             /************/
             case 11:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html> In \"The Little Mermaid,\" what alias does Ursula use when she becomes human?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Disney for $400 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Campus Life for $400 \nWhat does the 'Z' in ZSR stand for? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("venessa") || answer.equals("vennessa")){
+                if (answer.equals("Zachary") || answer.equals("zachary")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Venessa");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Zachary");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 14:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("<html>Who is the first and original disney princess?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Disney for $500 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Campus Life for $500 \nHow many acres is Wake's campus? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("snow white")){
+                if (answer.equals("340") || answer.equals("340 acres")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Snow White");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 340 acres");
                     score = moneyWrong(pos);
                 }
                 break;
