@@ -3,12 +3,10 @@ package javaProject;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Color;
@@ -173,34 +171,51 @@ public class jeopardy extends JFrame implements ActionListener{
         switch (pos){
             //Academics Questions
             case 0: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("Question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Academics for $100 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $100 \nHow many majors does Wake offer? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("45") || answer.equals("forty five") || answer.equals("Forty five")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 45");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 3:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Academics for $200 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $200 \nHow many minors does Wake offer? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("60") || answer.equals("sixty") || answer.equals("Sixty")){
+                    JOptionPane.showMessageDialog(null, "CORRECT!");
+                    score = money(pos);
+                    System.out.println(score);
+                }else{
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 60");
+                    score = moneyWrong(pos);
+                }
+                break;
+            /****************/
+            case 6: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+                myJeopardy[pos].setEnabled(false);
+                myJeopardy[pos].setBackground(Color.BLACK);
+                myJeopardy[pos].setIcon(null);
+
+                answer = JOptionPane.showInputDialog("Academics for $300 \nWhat hall is the office of academic advising in? \nWhat is: ");
+                answer = answer.toLowerCase();
+
+                if (answer.equals("Reynolda") || answer.equals("reynolda") || answer.equals("Reynolda hall")
+                || answer.equals("reynolda hall")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
@@ -210,39 +225,20 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /****************/
-            case 6: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
-                myJeopardy[pos].setEnabled(false);
-                myJeopardy[pos].setBackground(Color.BLACK);
-                myJeopardy[pos].setIcon(null);
-
-                answer = JOptionPane.showInputDialog("Academics for $300 \nWhat is: ");
-                answer = answer.toLowerCase();
-
-                if (answer.equals("answer") || answer.equals("gilly weed")){
-                    JOptionPane.showMessageDialog(null, "CORRECT!");
-                    score = money(pos);
-                    System.out.println(score);
-                }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
-                    score = moneyWrong(pos);
-                }
-                break;
             case 9:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Academics for $400 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $400 \nWhat is Wake's 2021 national rank? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("c")){
+                if (answer.equals("28") || answer.equals("twenty eight") || answer.equals("Twenty eight")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 28");
                     score = moneyWrong(pos);
                 }
                 break;
@@ -253,15 +249,16 @@ public class jeopardy extends JFrame implements ActionListener{
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Academics for $500 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Academics for $500" +
+                        " \nWhat is the total number of instructional employees at Wake? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("836")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 836");
                     score = moneyWrong(pos);
                 }
                 break;
@@ -269,96 +266,95 @@ public class jeopardy extends JFrame implements ActionListener{
             /******************************************************************************************************/
             //Sports
             case 1:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $100 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $100 \nHow many division 1 sports does Wake compete in? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("18") || answer.equals("eighteen") || answer.equals("Eighteen")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 18");
                     score = moneyWrong(pos);
                 }
                 break;
             /*************/
             case 4:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $200 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $200 \nWhat conference does Wake compete within? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("ACC") || answer.equals("acc") || answer.equals("Atlantic Coast Conference") ||
+                        answer.equals("atlantic coast conference") || answer.equals("Atlantic Coast") || answer.equals("atlantic coast")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Atlantic Coast Conference");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 7:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $300 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $300 " +
+                        "\nHow many bowl games has Wake football played in the last 20 years? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("9") || answer.equals("nine") || answer.equals("Nine")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 9");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 10:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $400 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $400 " +
+                        "\nHow many ACC championships has Wake won, across all sports, in the last 20 years? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer") || answer.equals("1")){
+                if (answer.equals("16") || answer.equals("sixteen") || answer.equals("Sixteen")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 16");
                     score = moneyWrong(pos);
                 }
                 break;
             /************/
             case 13:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
-                myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
                 myJeopardy[pos].setIcon(null);
 
-                answer = JOptionPane.showInputDialog("Sports for $500 \nWhat is: ");
+                answer = JOptionPane.showInputDialog("Sports for $500 \nWhat percentage of Wake student-athletes graduate? \nWhat is: ");
                 answer = answer.toLowerCase();
 
-                if (answer.equals("answer")){
+                if (answer.equals("95") || answer.equals("95%") || answer.equals("ninety five")
+                || answer.equals("Ninety five")){
                     JOptionPane.showMessageDialog(null, "CORRECT!");
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: 95%");
                     score = moneyWrong(pos);
                 }
                 break;
