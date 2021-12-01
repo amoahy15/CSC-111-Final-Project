@@ -13,6 +13,7 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+
 public class jeopardy extends JFrame implements ActionListener{
 
 
@@ -44,11 +45,12 @@ public class jeopardy extends JFrame implements ActionListener{
 
         board = new JPanel(new GridLayout(5, 3,5,5));
         getContentPane().setBackground(Color.BLACK);
+        board.setBackground(Color.BLACK);
+
 
         myJeopardy = new JButton[15];// Array of 15 buttons
         for (int i = 0; i < myJeopardy.length; i++){ //Loop to construct each button
-            myJeopardy[i] = new JButton("" + i);// construct new button
-
+            myJeopardy[i] = new JButton(""+i);// construct new button
 
             //Make only question buttons clickable
             if(i >= 0){
@@ -63,6 +65,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
         add(board, BorderLayout.CENTER);
         info = new JPanel(new FlowLayout());// layout of another panel at bottom of game
+        info.setBackground(Color.ORANGE);
         reset = new JButton("RESET"); //Reset button
         reset.addActionListener(this); //Make reset button clickable
         player1Wins = new JLabel(player1 + "'s Score: ");
@@ -87,15 +90,15 @@ public class jeopardy extends JFrame implements ActionListener{
 
             if (input == 1){ //Rules of the game
                 JOptionPane.showMessageDialog(null, "1. This is a two player game. \n"
-                                + "2. Must pick a category and a point value to play \n"
-                                + "3. Column 1 is Academics. \n"
-                                + "4. Column 2 is Sports. \n"
-                                + "5. Column 3 is Campus Life. \n"
-                                + "6. Click on the chosen box for the question. \n"
-                                + "7. Correct responses must satisfy the demands of both the clue and the category. \n"
-                                + "8. Responses must be spelled correctly \n"
-                                + "9. Click the “Reset” button to start all over.\n"
-                                + "10. Player with highest dollar amount at end of game wins", "Rules of Jeopardy",
+                        + "2. Must pick a category and a point value to play \n"
+                        + "3. Column 1 is Academics. \n"
+                        + "4. Column 2 is Sports. \n"
+                        + "5. Column 3 is Campus Life. \n"
+                        + "6. Click on the chosen box for the question. \n"
+                        + "7. Correct responses must satisfy the demands of both the clue and the category. \n"
+                        + "8. Responses must be spelled correctly \n"
+                        + "9. Click the “Reset” button to start all over.\n"
+                        + "10. Player with highest dollar amount at end of game wins", "Rules of Jeopardy",
                         JOptionPane.INFORMATION_MESSAGE);
 
             }//End if
