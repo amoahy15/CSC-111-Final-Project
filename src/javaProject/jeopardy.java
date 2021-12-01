@@ -83,7 +83,7 @@ public class jeopardy extends JFrame implements ActionListener{
         int input = 0; //Get user input
 
         do{ //Menu to display rules, enter player names, play game and exit menu
-            input = Integer.parseInt(JOptionPane.showInputDialog("1. View the rules of the game \n"
+            input = Integer.parseInt(JOptionPane.showInputDialog("Please enter a number. \n1. View the rules of the game \n"
                     + "2. Enter Player One and Player Two names \n"
                     + "3. Play the game! \n"
                     + "4. Exit Menu"));
