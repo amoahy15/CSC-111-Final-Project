@@ -44,10 +44,10 @@ public class jeopardy extends JFrame implements ActionListener{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new BorderLayout(5,5));
 
-        board = new JPanel(new GridLayout(5, 3,5,5)); // Grid layout width = 6, height = 7
+        board = new JPanel(new GridLayout(5, 3,5,5));
         getContentPane().setBackground(Color.BLACK);
 
-        myJeopardy = new JButton[42];// Array of 42 buttons
+        myJeopardy = new JButton[15];// Array of 15 buttons
         for (int i = 0; i < myJeopardy.length; i++){ //Loop to construct each button
             myJeopardy[i] = new JButton(""+i);// construct new button
 
@@ -148,18 +148,14 @@ public class jeopardy extends JFrame implements ActionListener{
     /************************************************************************/
     public void winner(){
         //If every button is disabled, the game ends and displays the winner's name
-        if (myJeopardy[6].isEnabled() == false && myJeopardy[7].isEnabled() == false && myJeopardy[8].isEnabled() == false &&
-                myJeopardy[9].isEnabled() == false && myJeopardy[10].isEnabled() == false && myJeopardy[11].isEnabled() == false &&
-                myJeopardy[12].isEnabled() == false && myJeopardy[13].isEnabled() == false && myJeopardy[14].isEnabled() == false &&
-                myJeopardy[15].isEnabled() == false && myJeopardy[16].isEnabled() == false && myJeopardy[17].isEnabled() == false &&
-                myJeopardy[18].isEnabled() == false && myJeopardy[19].isEnabled() == false && myJeopardy[20].isEnabled() == false &&
-                myJeopardy[21].isEnabled() == false && myJeopardy[22].isEnabled() == false && myJeopardy[23].isEnabled() == false &&
-                myJeopardy[24].isEnabled() == false && myJeopardy[30].isEnabled() == false && myJeopardy[36].isEnabled() == false &&
-                myJeopardy[25].isEnabled() == false && myJeopardy[31].isEnabled() == false && myJeopardy[37].isEnabled() == false &&
-                myJeopardy[26].isEnabled() == false && myJeopardy[32].isEnabled() == false && myJeopardy[38].isEnabled() == false &&
-                myJeopardy[27].isEnabled() == false && myJeopardy[33].isEnabled() == false && myJeopardy[39].isEnabled() == false &&
-                myJeopardy[28].isEnabled() == false && myJeopardy[34].isEnabled() == false && myJeopardy[40].isEnabled() == false &&
-                myJeopardy[29].isEnabled() == false && myJeopardy[35].isEnabled() == false && myJeopardy[41].isEnabled() == false ){
+        if (myJeopardy[0].isEnabled() == false && myJeopardy[1].isEnabled() == false &&
+                myJeopardy[2].isEnabled() == false && myJeopardy[3].isEnabled() == false &&
+                myJeopardy[4].isEnabled() == false && myJeopardy[5].isEnabled() == false &&
+                myJeopardy[6].isEnabled() == false && myJeopardy[7].isEnabled() == false &&
+                myJeopardy[8].isEnabled() == false && myJeopardy[9].isEnabled() == false &&
+                myJeopardy[10].isEnabled() == false && myJeopardy[11].isEnabled() == false &&
+                myJeopardy[12].isEnabled() == false && myJeopardy[13].isEnabled() == false
+                && myJeopardy[14].isEnabled() == false){
             if (p1Score > p2Score || p1Score >= 6300){
                 JOptionPane.showMessageDialog(null, player1 + " is the WINNER!!!","Winner",JOptionPane.INFORMATION_MESSAGE);
                 disableButtons(); //Call to disable buttons
@@ -176,7 +172,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
         switch (pos){
             //Sports Questions
-            case 1: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 0: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("Question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -195,7 +191,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 4:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 3:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("question");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -214,7 +210,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /****************/
-            case 7: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 6: myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>What does Harry eat to manage to breathe "
                         + "underwater during the second task"
                         + "of the Triwizard Tournament?</html>");
@@ -234,7 +230,7 @@ public class jeopardy extends JFrame implements ActionListener{
                     score = moneyWrong(pos);
                 }
                 break;
-            case 10:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 9:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>What does the spell \"Obliviate\" do? <br>"
                         + "a. Destroy objects <br>"
                         + "b. Make objects invisible <br>"
@@ -256,7 +252,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 13:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 12:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>What is the killing curse?<br>"
                         + "(Please spell correctly)");
                 myJeopardy[pos].setEnabled(false);
@@ -278,7 +274,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
             /******************************************************************************************************/
             //Academics
-            case 2:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 1:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>Who directed Rogue One: A Star Wars Story? </html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -297,7 +293,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /*************/
-            case 5:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 4:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>Who provided the voice of Yoda? </html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -316,7 +312,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 8:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 7:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>Who commissioned the Grand Army of the Republic?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -335,7 +331,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 11:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 10:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>How many known Jedi possess a purple-bladed lightsaber?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -354,7 +350,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 14:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 13:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>Qui-Gon Jinn dies during a duel on which planet?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -375,7 +371,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
             /******************************************************************************************************/
             //Campus Life
-            case 3:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 2:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>In \"The Lion King,\" what side of Scar's face is his scar on? Left or right?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -394,7 +390,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /*************/
-            case 6:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 5:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>In \"Aladdin,\" what does Aladdin, and a reluctant Abu, give to the poor children to eat?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -413,7 +409,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 9:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 8:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>In \"Hercules,\" Hades promised not to harm Megara if Hercules gave up his strength for how long?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -432,7 +428,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 12:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 11:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html> In \"The Little Mermaid,\" what alias does Ursula use when she becomes human?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -451,7 +447,7 @@ public class jeopardy extends JFrame implements ActionListener{
                 }
                 break;
             /************/
-            case 15:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
+            case 14:myJeopardy[pos].setFont(new Font("Arial", Font.BOLD,11));
                 myJeopardy[pos].setText("<html>Who is the first and original disney princess?</html>");
                 myJeopardy[pos].setEnabled(false);
                 myJeopardy[pos].setBackground(Color.BLACK);
@@ -475,23 +471,20 @@ public class jeopardy extends JFrame implements ActionListener{
     /************************************************************************/
     public int money(int pos){
         //Method to set what each button is worth score wise
-        if (pos == 6 || pos == 7 || pos == 8 || pos == 9 || pos == 10 || pos == 11){
+        if (pos == 0 || pos == 1 || pos == 2){
             score = 100;
         }
-        else if (pos == 12 || pos == 13 || pos == 14 || pos == 15 || pos == 16 || pos == 17){
+        else if (pos == 3 || pos == 4 || pos == 5){
             score = 200;
         }
-        else if (pos == 18 || pos == 19 || pos == 20 || pos == 21 || pos == 22 || pos == 23){
+        else if (pos == 6 || pos == 7 || pos == 8){
             score = 300;
         }
-        else if (pos == 24 || pos == 25 || pos == 26 || pos == 27 || pos == 28 || pos == 29){
+        else if (pos == 9 || pos == 10 || pos == 11){
             score = 400;
         }
-        else if (pos == 30 || pos == 31 || pos == 32 || pos == 33 || pos == 34 || pos == 35){
+        else if (pos == 12 || pos == 13 || pos == 14){
             score = 500;
-        }
-        else if (pos == 36 || pos == 37 || pos == 38 || pos == 39 || pos == 40 || pos == 41){
-            score = 600;
         }
         return score;
     }//End money
@@ -499,12 +492,9 @@ public class jeopardy extends JFrame implements ActionListener{
     /************************************************************************/
     public int moneyWrong(int pos){
         //Method to display a score of ) if answer is incorrect
-        if (pos == 6 || pos == 7 || pos == 8 || pos == 9 || pos == 10 || pos == 11 ||
-                pos == 12 || pos == 13 || pos == 14 || pos == 15 || pos == 16 || pos == 17 ||
-                pos == 18 || pos == 19 || pos == 20 || pos == 21 || pos == 22 || pos == 23 ||
-                pos == 24 || pos == 25 || pos == 26 || pos == 27 || pos == 28 || pos == 29 ||
-                pos == 30 || pos == 31 || pos == 32 || pos == 33 || pos == 34 || pos == 35 ||
-                pos == 36 || pos == 37 || pos == 38 || pos == 39 || pos == 40 || pos == 41){
+        if (pos == 0 || pos == 1 || pos == 2 || pos == 3 || pos == 4 || pos == 5 ||
+                pos == 6 || pos == 7 || pos == 8 || pos == 9 || pos == 10 || pos == 11 ||
+                pos == 12 || pos == 13 || pos == 14){
             score = 0;
         }//End if
 
