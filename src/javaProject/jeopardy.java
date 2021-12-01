@@ -47,7 +47,7 @@ public class jeopardy extends JFrame implements ActionListener{
 
         myJeopardy = new JButton[15];// Array of 15 buttons
         for (int i = 0; i < myJeopardy.length; i++){ //Loop to construct each button
-            myJeopardy[i] = new JButton(""+i);// construct new button
+            myJeopardy[i] = new JButton("" + i);// construct new button
 
 
             //Make only question buttons clickable
@@ -88,11 +88,14 @@ public class jeopardy extends JFrame implements ActionListener{
             if (input == 1){ //Rules of the game
                 JOptionPane.showMessageDialog(null, "1. This is a two player game. \n"
                                 + "2. Must pick a category and a point value to play \n"
-                                + "3. Click on the chosen box for the question. \n"
-                                + "4. Correct responses must satisfy the demands of both the clue and the category. \n"
-                                + "5. Responses must be spelled correctly \n"
-                                + "6. Click the “Reset” button to start all over.\n"
-                                + "7. Player with highest dollar amount at end of game wins", "Rules of Jeopardy",
+                                + "3. Column 1 is Academics. \n"
+                                + "4. Column 2 is Sports. \n"
+                                + "5. Column 3 is Campus Life. \n"
+                                + "6. Click on the chosen box for the question. \n"
+                                + "7. Correct responses must satisfy the demands of both the clue and the category. \n"
+                                + "8. Responses must be spelled correctly \n"
+                                + "9. Click the “Reset” button to start all over.\n"
+                                + "10. Player with highest dollar amount at end of game wins", "Rules of Jeopardy",
                         JOptionPane.INFORMATION_MESSAGE);
 
             }//End if
