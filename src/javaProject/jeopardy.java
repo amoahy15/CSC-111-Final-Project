@@ -154,11 +154,11 @@ public class jeopardy extends JFrame implements ActionListener{
                 myJeopardy[10].isEnabled() == false && myJeopardy[11].isEnabled() == false &&
                 myJeopardy[12].isEnabled() == false && myJeopardy[13].isEnabled() == false
                 && myJeopardy[14].isEnabled() == false){
-            if (p1Score > p2Score || p1Score >= 6300){
+            if (p1Score > p2Score || p1Score >= 4500){
                 JOptionPane.showMessageDialog(null, player1 + " is the WINNER!!!","Winner",JOptionPane.INFORMATION_MESSAGE);
                 disableButtons(); //Call to disable buttons
             }
-            else if (p1Score < p2Score || p2Score >= 6300){
+            else if (p1Score < p2Score || p2Score >= 4500){
                 JOptionPane.showMessageDialog(null, player2 + " is the WINNER!!!","Winner",JOptionPane.INFORMATION_MESSAGE);
                 disableButtons(); //Call to disable buttons
             }
