@@ -499,7 +499,7 @@ public class jeopardy extends JFrame implements ActionListener{
         if(i == 0 || i == 1 || i == 2 || i == 3 || i == 4 || i == 5){
             myJeopardy[i].setBackground(Color.WHITE);
         }else
-        if(i == 8 || i == 14 || i == 20 || i == 26 || i == 32 || i == 38){
+        if(i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i == 13 || i == 14){
             myJeopardy[i].setBackground(Color.WHITE);
         }//End if
 
