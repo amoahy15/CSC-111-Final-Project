@@ -236,7 +236,7 @@ public class jeopardy extends JFrame implements ActionListener{
                     score = money(pos);
                     System.out.println(score);
                 }else{
-                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: answer");
+                    JOptionPane.showMessageDialog(null, "WRONG!\n Correct Answer: Reynolda Hall");
                     score = moneyWrong(pos);
                 }
                 break;
