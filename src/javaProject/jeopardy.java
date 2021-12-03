@@ -38,6 +38,9 @@ public class jeopardy extends JFrame implements ActionListener{
 
     /*************************************************************************/
     public jeopardy(Color theColor){
+        //Creates the board and buttons
+        //Makes buttons clickable
+
         super("Wake Forest Jeopardy"); //Name that appears at the top
         setSize(WIDTH, HEIGHT);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -58,7 +61,6 @@ public class jeopardy extends JFrame implements ActionListener{
             }//End if
 
             myJeopardy[i].setSize(10,10);
-            categories(i); //Call method to set button background colors
             myJeopardy[i].setForeground(Color.BLACK);
             board.add(myJeopardy[i]);
         }// End for
@@ -79,6 +81,7 @@ public class jeopardy extends JFrame implements ActionListener{
     /*************************************************************************/
 
     public static void main(String[] args) {
+        //Creates user input menu that starts the game
 
         int input = 0; //Get user input
 
@@ -124,6 +127,8 @@ public class jeopardy extends JFrame implements ActionListener{
     }//End main
     /************************************************************************/
     public void actionPerformed(ActionEvent e) {
+        //Actions performed on the board; Allows user to reset the game, controls turns, and controls the score/winner
+
         System.out.println(e); //What prints out in console
         String actionCommand = e.getActionCommand();
         System.out.println("this is the item : " + actionCommand); //Prints out index location of button in array
@@ -152,6 +157,7 @@ public class jeopardy extends JFrame implements ActionListener{
     /************************************************************************/
     public void winner(){
         //If every button is disabled, the game ends and displays the winner's name
+
         if (myJeopardy[0].isEnabled() == false && myJeopardy[1].isEnabled() == false &&
                 myJeopardy[2].isEnabled() == false && myJeopardy[3].isEnabled() == false &&
                 myJeopardy[4].isEnabled() == false && myJeopardy[5].isEnabled() == false &&
@@ -161,11 +167,13 @@ public class jeopardy extends JFrame implements ActionListener{
                 myJeopardy[12].isEnabled() == false && myJeopardy[13].isEnabled() == false
                 && myJeopardy[14].isEnabled() == false){
             if (p1Score > p2Score || p1Score >= 4500){
-                JOptionPane.showMessageDialog(null, player1 + " is the WINNER!!!","Winner",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, player1 + " is the WINNER!!!","Winner",
+                        JOptionPane.INFORMATION_MESSAGE);
                 disableButtons(); //Call to disable buttons
             }
             else if (p1Score < p2Score || p2Score >= 4500){
-                JOptionPane.showMessageDialog(null, player2 + " is the WINNER!!!","Winner",JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(null, player2 + " is the WINNER!!!","Winner",
+                        JOptionPane.INFORMATION_MESSAGE);
                 disableButtons(); //Call to disable buttons
             }
         }
@@ -173,6 +181,8 @@ public class jeopardy extends JFrame implements ActionListener{
 
     /************************************************************************/
     public int questions(int pos, int score){
+        //Questions that print to the screen in a text box when button is clicked
+        //Collects user input and determines if input is correct or incorrect
 
         switch (pos){
             //Academics Questions
@@ -464,6 +474,7 @@ public class jeopardy extends JFrame implements ActionListener{
     /************************************************************************/
     public int money(int pos){
         //Method to set what each button is worth score wise
+
         if (pos == 0 || pos == 1 || pos == 2){
             score = 100;
         }
@@ -484,7 +495,8 @@ public class jeopardy extends JFrame implements ActionListener{
 
     /************************************************************************/
     public int moneyWrong(int pos){
-        //Method to display a score of ) if answer is incorrect
+        //Method to display a score of 0 if answer is incorrect
+
         if (pos == 0 || pos == 1 || pos == 2 || pos == 3 || pos == 4 || pos == 5 ||
                 pos == 6 || pos == 7 || pos == 8 || pos == 9 || pos == 10 || pos == 11 ||
                 pos == 12 || pos == 13 || pos == 14){
@@ -495,21 +507,13 @@ public class jeopardy extends JFrame implements ActionListener{
     }//End money
 
     /************************************************************************/
-    public void categories(int i){
-        if(i == 0 || i == 1 || i == 2 || i == 3 || i == 4 || i == 5){
-            myJeopardy[i].setBackground(Color.WHITE);
-        }else
-        if(i == 6 || i == 7 || i == 8 || i == 9 || i == 10 || i == 11 || i == 12 || i == 13 || i == 14){
-            myJeopardy[i].setBackground(Color.WHITE);
-        }//End if
-
-    }//End categories
 
     public void resetBoard(){
+        //Resets the board and score
+
         for (int i = 0; i < myJeopardy.length; i++){
             myJeopardy[i].setEnabled(true);
             myJeopardy[i].setText("" + i);
-            categories(i);
             myJeopardy[i].setForeground(Color.BLACK);
             p1Score = 0;
             p2Score = 0;
@@ -519,10 +523,11 @@ public class jeopardy extends JFrame implements ActionListener{
     }//End resetBoard
     /*******************************************************************/
     public void disableButtons(){
+        //Disables the clicking of buttons on the board
+
         for (int i = 0; i < myJeopardy.length; i++){
             myJeopardy[i].setEnabled(false);
             myJeopardy[i].setText("" + i);
-            categories(i);
             myJeopardy[i].setForeground(Color.BLACK);
         }
     }
