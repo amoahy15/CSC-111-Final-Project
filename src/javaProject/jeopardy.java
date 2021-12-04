@@ -108,6 +108,13 @@ public class jeopardy extends JFrame implements ActionListener{
             else if (input == 2){ //Enter player 1 and player 2 names
                 player1 = JOptionPane.showInputDialog("Enter Player One's name: ");
                 player2 = JOptionPane.showInputDialog("Enter Player Two's name: ");
+
+                //If players have the same names, ask to type again
+                while(player1.equals(player2)){
+                    JOptionPane.showMessageDialog(null, "Please Enter a Different Name");
+                    player1 = JOptionPane.showInputDialog("Enter Player One's name: ");
+                    player2 = JOptionPane.showInputDialog("Enter Player Two's name: ");
+                }
             }//End else
             else if (input == 3){
                 while (player1 == null || player2 == null){ //While loop validation if no entry for names
@@ -115,6 +122,12 @@ public class jeopardy extends JFrame implements ActionListener{
                             + "Please enter names for Player One or Player Two: ");
                     player1 = JOptionPane.showInputDialog("Enter Player One's name: ");
                     player2 = JOptionPane.showInputDialog("Enter Player Two's name: ");
+
+                    while(player1.equals(player2)){
+                        JOptionPane.showMessageDialog(null, "Please Enter a Different Name");
+                        player1 = JOptionPane.showInputDialog("Enter Player One's name: ");
+                        player2 = JOptionPane.showInputDialog("Enter Player Two's name: ");
+                    }
                 }//End while
 
                 //Start Game
